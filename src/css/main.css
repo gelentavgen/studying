@@ -1,0 +1,124 @@
+* {
+  font-family: "Museo Sans Cyrl";
+}
+
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.promo {
+  min-height: 650px;
+  padding: 21px 0 93px 0;
+  background: url("../img/bg.png") center center/cover no-repeat;
+}
+.promo_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 90px;
+}
+.promo__header {
+  font-weight: 700;
+  font-size: 42px;
+  color: white;
+  text-transform: uppercase;
+  line-height: 42px;
+}
+.promo__subheader {
+  margin-top: 17px;
+  font-size: 24px;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 24px;
+}
+.promo_icons {
+  margin-top: 65px;
+  width: 425px;
+  display: flex;
+  justify-content: space-between;
+}
+.promo__icon {
+  width: 106px;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+}
+.promo__icon img {
+  width: 42px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.promo__link {
+  margin-top: 18px;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+}
+.promo__link a {
+  text-transform: uppercase;
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  width: 250px;
+}
+.header__logo img {
+  width: 100%;
+}
+.header__official {
+  font-weight: 500;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+}
+.header__official span {
+  font-weight: 500;
+  font-size: 18px;
+  font-family: Museo Moderno;
+}
+.header__phone {
+  display: block;
+  font-weight: bold;
+  font-size: 18px;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 700;
+}
+.header__phone:hover {
+  color: white;
+  text-decoration: none;
+}
+.header__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  width: 153px;
+  height: 32px;
+  border-radius: 5px;
+  background-color: #C70101;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 12px;
+}
+.button_main {
+  margin-top: 67px;
+  width: 303px;
+  height: 54px;
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=main.css.map */
