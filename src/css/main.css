@@ -1,3 +1,14 @@
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 * {
   font-family: "Museo Sans Cyrl";
 }
@@ -169,6 +180,15 @@
 }
 .benefits__descr a {
   color: #FF0000;
+}
+.benefits__icons_animated {
+  animation-name: heartbeat;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+.benefits__icons_animated:hover {
+  animation-play-state: paused;
 }
 
 .consultation {
@@ -579,6 +599,18 @@
 
 #consultation, #order, #thanks {
   display: none;
+}
+
+.pageup {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+}
+.pageup img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,14 +1,13 @@
-// alert(1);
 // let answer = confirm('Are you over 18?')
-// console.log(answer)
 // let validation = prompt('Are you over 18?', '');
-// console.log(validation);
 // let answer = confirm('Are you over 18?');
 // if (answer) {
 //   console.log('you are welcome')
 // } else {
 //   console.log('get out')
 // };
+
+// const { post } = require("jquery");
 
 // for (let i = 1; i < 8; i++) {
 //   console.log(i)
@@ -18,7 +17,8 @@
 //   console.log(a + b)
 // };
 // logging(3, 5);
-$(document).ready(function(){
+
+$(document).ready(function() {
   $('.carousel_inner').slick({
     // dots: true,
     infinite: true,
@@ -73,6 +73,7 @@ $(document).ready(function(){
       })
     })
   }
+
   toggleSlide('.catalog-item__back');
   toggleSlide('.catalog-item__link');
 
@@ -117,4 +118,45 @@ $(document).ready(function(){
   validateForm('#consultation form');
 
   $('input[name=phone]').mask("+38 (999) 999-9999");
+
+  const form = document.getElementById('consultation');
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const element = event.target;
+    
+    const name = element[0].value;
+    const phone = element[1].value;
+    const email = element[2].value;
+
+    fetch('http://localhost:3000/test', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ name, phone, email })
+    })
+  })
+
+  //smooth scroll
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 1600) {
+      $('.pageup').fadeIn();
+    } else {
+      $('.pageup').fadeOut();
+    }
+  });
+
+  $('a[href^=#up').on('click', function() {
+
+    const href = $(this).attr('href');
+
+    $('html, body').animate({
+        scrollTop: $(href).offset().top
+    });
+    return false;
+  });
+
+  new WOW().init();
 });
